@@ -44,9 +44,9 @@ export default function Page() {
         So, what is this exactly? {String.fromCodePoint(0x1f615)}
       </h1>
       <Divider />
-      <main className="flex min-h-screen flex-col items-center mt-24 ">
+      <main className="flex min-h-screen flex-col items-center mt-16  mx-16">
         {/* <p>Glad you asked </p> */}
-        <Card>
+        <Card className="">
           <CardBody>
             <p>
               1. Submit a shidduch anonymously with the relevant information you
@@ -65,8 +65,10 @@ export default function Page() {
           </CardBody>
         </Card>
         <Divider className="m-24" />
-        <footer className="m-24">
-          More questions? Reach out to help@anonymousshadchan.com
+        <footer className="m-24 text-center">
+          More questions?
+          <br />
+          Reach out to help@anonymousshadchan.com
         </footer>
       </main>
     </div>

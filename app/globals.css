@@ -51,6 +51,43 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* .nav-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: white;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} */
+
+.nav-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .nav-link::after {
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

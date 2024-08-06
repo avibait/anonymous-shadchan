@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -10,6 +11,7 @@ import {
   NavbarItem,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
+import Navigation from "./components/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +29,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Navbar
+          <Navigation />
+          {/* <Navbar
             position="sticky"
             className="bg-white shadow flex justify-center h-16"
           >
@@ -43,7 +46,7 @@ export default function RootLayout({
                 </Link>
               </NavbarItem>
             </NavbarContent>
-          </Navbar>
+          </Navbar> */}
           {children}
 
           <footer className="flex items-center justify-center">

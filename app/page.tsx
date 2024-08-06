@@ -4,24 +4,24 @@ import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 
 export default function Home() {
+  const id = uuidv4();
+  console.log("ID?", id);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="">
+    <main className="flex flex-col items-center justify-between pt-12 ">
+      <div className=" items-center">
         <div>
-          <Card>
+          <Card className="w-5/6 md:w-full">
             {/* <CardHeader className=""></CardHeader> */}
 
             <CardBody>
-              <div className="text-center p-2"> Your Shidduch Id:</div>
+              <div className="text-center p-2">Shidduch Id:</div>
               <div className="bg-purple-100 p-4 rounded-lg text-center">
-                <span className="text-xl font-bold text-gray-800 m-30">
-                  {uuidv4()}
-                </span>
+                <span className="text-lg  text-gray-800 m-30">{id}</span>
               </div>
             </CardBody>
             <Divider />
-            <CardFooter className="grid justify-items-end">
-              <Tooltip
+            {/* <CardFooter className="grid text-center text-xs"> */}
+            {/* <Tooltip
                 showArrow
                 classNames={{
                   base: [
@@ -37,15 +37,24 @@ export default function Home() {
                 color="secondary"
                 size="sm"
                 placement="bottom-end"
-                content=" Copy and paste your shidduch id into the form and save in a secure location to redeem your reward "
-              >
-                What is this?
-              </Tooltip>
-            </CardFooter>
+                content=" "
+              > */}
+            {/* Copy and paste your shidduch id into the form
+              <br />
+              save in a secure location to redeem your reward */}
+            {/* </Tooltip> */}
+            {/* </CardFooter> */}
           </Card>
         </div>
-        <div className="border-3  text-center rounded-lg p-10 m-10 font-mono">
-          THIS IS WHERE GOOGLE FORM GOES
+        <div className="">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc62fyicocTCVWYbFASn0MyulDvQ8TfX4WPoW5pzO2VgvK5KQ/viewform?embedded=true"
+            // width="640"
+            // height="m"
+            className="w-5/6 md:w-full h-screen"
+          >
+            Loading…
+          </iframe>
         </div>
         {/* <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get f started by editing&nbsp;
