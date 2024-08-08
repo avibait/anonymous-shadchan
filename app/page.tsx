@@ -21,21 +21,34 @@ export default function Home() {
           <p className=" word-animation word-delay-1">Suggest a Shidduch, </p>
           <br />
           <p className="word-animation word-delay-1">
-            recesive <span className="purple-text">$500</span>
+            receive <span className="purple-text">$500</span>
           </p>
         </h1>
-        <ul className="list-disc pt-6 list-inside lg:text-justify md:pb-[120px]  ld:pb-[120px] pb-[20px] word-animation word-delay-2">
-          <li>Submit a form</li>
-          <li>We reach out</li>
-          <li>You get money</li>
-        </ul>
+        <ol className="lg:text-[18px]  pt-6 list-inside lg:text-justify md:pb-[120px]  ld:pb-[120px] pb-[20px] word-animation word-delay-2">
+          <li>
+            1. Fill in the names (and optionally add additonal information).
+          </li>
+          {/* <li>2.(Optional)</li> */}
+          <li>
+            2. Copy your Shidduch ID from the top of the form and paste in the
+            form.
+          </li>
+          <li>
+            3. Before submitting, copy and save your Shidduch ID in a secure
+            location.
+          </li>
+          {/* <li>
+            3. Before submitting, copy and save your Shidduch ID in a secure
+            location.
+          </li> */}
+        </ol>
         <div className="py-[20px]">
           <Link href="#about" passHref>
             <button
               onClick={(e) => handleScroll(e, "about")}
               className="px-[20px] py-[10px] purple  word-animation word-delay-2"
             >
-              Learn More
+              How it works
             </button>
           </Link>
         </div>

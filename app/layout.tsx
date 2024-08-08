@@ -47,7 +47,7 @@ export default function RootLayout({
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <body className={`${roboto.className}`}>
+      <body className={`${roboto.className} bg-custom-gradient`}>
         <Providers>
           {/* <Navigation /> */}
           {/* <Navbar
@@ -71,7 +71,7 @@ export default function RootLayout({
 
           <footer className="flex items-center justify-center py-8">
             <p className="text-center">
-              © {new Date().getFullYear()} Anoddnymous Shadchan.
+              © {new Date().getFullYear()} Anonymous Shadchan.
               {/* <br />
               All rights reserved. */}
             </p>

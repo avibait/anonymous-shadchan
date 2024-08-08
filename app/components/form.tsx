@@ -27,7 +27,7 @@ export default function Form() {
               <span className="text-lg  text-gray-800 m-30">{id}</span>
             </div> */}
             <div suppressHydrationWarning className="text-center pt-4">
-              <b>Shidduch ID:</b> {id}
+              <b>Your Shidduch ID:</b> {id}
               {/* <Image src={CopyIcon} alt="My SVG" width={20} height={20} /> */}
               <div className="p-2">
                 <CopyButton textToCopy={id} />{" "}

@@ -5,20 +5,25 @@ import { useState } from "react";
 const About: React.FC = () => {
   return (
     <div className="content-center">
-      Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-      roots in a piece of classical Latin literature from 45 BC, making it over
-      2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-      College in Virginia, looked up one of the more obscure Latin words,
-      consectetur, from a Lorem Ipsum passage, and going through the cites of
-      the word in classical literature, discovered the undoubtable source. Lorem
-      Ipsum comes from sections 1.10.32 and 1.10.33 ofFinibus Bonorum et e
-      Extremes of Good and Eviby Cicero, written in 45 BC. This book is a
-      treatise on the theory of ethics, very popular during the Renaissance. The
-      first line of Lorem Ipsum,rem ipsum dolor sit ams from a line in section
-      1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is
-      reproduced below for those interested. Cicero are also reproduced in their
-      exact original form, accompanied by English versions from the 1914
-      translation by H. Rackham.
+      <p>
+        We are a few young Lubavitcher couples in our community hoping to make a
+        difference in the Chabad shidduch scene. How? By leveraging the
+        knowledge of each individual, we aim to facilitate as many shidduchim as
+        possible.
+      </p>
+      <p className="py-8">
+        Here&apos;s how it works: Submit a shidduch suggestion anonymously by
+        sharing details about a potential match. Our dedicated team will then
+        reach out to both parties, informing them that someone has suggested the
+        shidduch.
+      </p>
+      <p>
+        If your suggestion leads to an engagement, submit your Shidduch ID and
+        you’ll receive a $500 reward for.
+      </p>
+      <p className="py-8">
+        Questions or comments? Email us at admin@anonymousshadchan.com
+      </p>
     </div>
   );
 };
