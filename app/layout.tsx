@@ -12,6 +12,7 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import Navigation from "./components/navigation";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,6 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <body className={`${roboto.className}`}>
         <Providers>
           {/* <Navigation /> */}
@@ -65,11 +69,11 @@ export default function RootLayout({
           </Navbar> */}
           {children}
 
-          <footer className="flex items-center justify-center py-12">
+          <footer className="flex items-center justify-center py-8">
             <p className="text-center">
-              © {new Date().getFullYear()} Anonymous Shadchan.
-              <br />
-              All rights reserved.
+              © {new Date().getFullYear()} Anoddnymous Shadchan.
+              {/* <br />
+              All rights reserved. */}
             </p>
           </footer>
         </Providers>

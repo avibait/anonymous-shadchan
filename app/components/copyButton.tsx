@@ -11,7 +11,11 @@ const imageStyle = {
   display: "inline",
 };
 
-const CopyButton = ({ textToCopy }) => {
+interface Props {
+  textToCopy: string;
+}
+
+const CopyButton: React.FC<Props> = ({ textToCopy }) => {
   const [copied, setCopied] = useState(false);
   // const textToCopy = "This is the text to be copied!";
 
@@ -39,8 +43,8 @@ const CopyButton = ({ textToCopy }) => {
           width={20}
           height={20}
         />
+        <span className="pl-1 text-xs">{copied ? "Copied!" : "Copy"} </span>
       </button>
-      <span className="pl-1 text-xs">{copied ? "Copied!" : "Copy"} </span>
     </>
     // </Container>
   );

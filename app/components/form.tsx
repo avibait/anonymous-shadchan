@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import { v4 as uuidv4 } from "uuid";
 import { Tooltip } from "@nextui-org/tooltip";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
@@ -6,23 +6,28 @@ import { Divider } from "@nextui-org/divider";
 import CopyButton from "./copyButton";
 import Image from "next/image";
 import CopyIcon from "../icons/copy.svg";
+import { useEffect, useState } from "react";
 
-export default function form() {
-  const id = uuidv4();
-  console.log("id", id);
+export default function Form() {
+  const [id, setId] = useState(uuidv4());
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setId(uuidv4());
+  }, []);
+
   return (
     <div className="content-center ">
       <div>
-        <Card className="">
+        <Card className="form-animation form-delay">
           {/* <CardHeader className=""></CardHeader> */}
 
           <CardBody>
             {/* <div className="text-center p-2">Shidduch Id:</div>
-            <div className="bg-purple-100 p-4 rounded-lg text-center">
+            <div className=  "bg-purple-100 p-4 rounded-lg text-center">
               <span className="text-lg  text-gray-800 m-30">{id}</span>
             </div> */}
-            <div className="text-center">
-              <b>Shidduch Id:</b> {id}
+            <div suppressHydrationWarning className="text-center pt-4">
+              <b>Shidduch ID:</b> {id}
               {/* <Image src={CopyIcon} alt="My SVG" width={20} height={20} /> */}
               <div className="p-2">
                 <CopyButton textToCopy={id} />{" "}
@@ -61,9 +66,9 @@ export default function form() {
             // width="640"
             // height="m"
             className="md:w-full h-screen"
-          >
-            Loading…
-          </iframe>
+            onLoad={() => setLoading(false)}
+          ></iframe>
+          {loading && <div className="align-content text-center">Loading</div>}
         </Card>
       </div>
       <div className=""></div>

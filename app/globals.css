@@ -99,4 +99,53 @@ body {
     border-radius: 4px;
 
   }
+
+  .purple-text {
+    color: rgb(143, 90, 220)
+  }
+
+  @keyframes showWord {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .form-animation {
+    /* display: inline-block; */
+    opacity: 0;
+    animation: showWord 0.9s forwards;
+  }
+  
+  .word-animation {
+    display: inline-block;
+    opacity: 0;
+    animation: showWord 0.9s forwards;
+  }
+  
+  .word-delay-1 {
+    animation-delay: 0.2s;
+  }
+  
+  .word-delay-2 {
+    animation-delay: 0.4s;
+  }
+  
+  .word-delay-3 {
+    animation-delay: 9s;
+  }
+  
+  .word-delay-4 {
+    animation-delay: 2s;
+  }
+
+  .form-delay {
+    animation-delay: 0.5s;
+  }
+
+
 }
